@@ -1,4 +1,4 @@
-{% set version = "20170625" %}
+{% set version = "20171231" %}
 
 package:
   name: lastools
@@ -7,7 +7,7 @@ package:
 source:
   fn: {{ version }}.tar.gz
   url: https://github.com/gillins/LAStools/archive/{{ version }}.tar.gz
-  sha256: f2f2b9a798ce7642a820aa90e3cbd8550a2ed0d2d50d5422a16483a944b605ff
+  sha256: 43019eff9a21f2303dcb1c1de6973318c444650060022fbc8f1fb6c6bf1814f1
 
 build:
   number: 0
