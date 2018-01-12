@@ -7,7 +7,7 @@ package:
 source:
   fn: {{ version }}.tar.gz
   url: https://github.com/gillins/LAStools/archive/{{ version }}.tar.gz
-  sha256: 90627f9c0b61d15d438ce54138805073e1656d3926417179c71f53d170d50499
+  sha256: b9b3d6fb556735b6cf751e9383669f843fa501ab755b6552f8cec2fccea417d5
 
 build:
   number: 0
