@@ -1,4 +1,7 @@
 
+:: Remove -GL from CXXFLAGS as this causes a fatal error
+set "CXXFLAGS= -MD"
+
 cmake -G "NMake Makefiles" -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% -D CMAKE_BUILD_TYPE=Release .
 if errorlevel 1 exit 1
 
