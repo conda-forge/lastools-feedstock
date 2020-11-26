@@ -10,7 +10,7 @@ source:
   sha256: b9b3d6fb556735b6cf751e9383669f843fa501ab755b6552f8cec2fccea417d5
 
 build:
-  number: 1000
+  number: 1001
 
 requirements:
   build:
@@ -43,7 +43,7 @@ test:
 
 about:
   home: http://www.cs.unc.edu/~isenburg/lastools/
-  license: LGPL2.1
+  license: LGPL-2.1-only
   license_file: LICENSE.txt
   summary: LASlib and LASzip libraries plus open source utilities from LAStools for manipulating LiDAR data in LAS format
 
