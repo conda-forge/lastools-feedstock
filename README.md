@@ -3,7 +3,7 @@ About lastools
 
 Home: http://www.cs.unc.edu/~isenburg/lastools/
 
-Package license: LGPL2.1
+Package license: LGPL-2.1-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lastools-feedstock/blob/master/LICENSE.txt)
 
