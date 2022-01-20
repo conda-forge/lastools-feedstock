@@ -5,6 +5,6 @@
 mkdir build
 cd build
 
-cmake -D CMAKE_INSTALL_PREFIX=$PREFIX -D CMAKE_BUILD_TYPE=Release ..
+cmake ${CMAKE_ARGS} -G Ninja -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_BUILD_TYPE=Release ..
+ninja install
 
-make install -j$CPU_COUNT
