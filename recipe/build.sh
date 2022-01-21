@@ -5,6 +5,14 @@
 mkdir build
 cd build
 
-cmake -D CMAKE_INSTALL_PREFIX=$PREFIX -D CMAKE_BUILD_TYPE=Release ..
+cmake ${CMAKE_ARGS} -G Ninja -DCMAKE_INSTALL_PREFIX=$PREFIX \
+    -DBUILD_SHARED_LIBS=ON \
+    -DCMAKE_BUILD_TYPE=Release \
+    ..
+ninja install
 
-make install -j$CPU_COUNT
+# for some reason the shared lib gets put into a 'LASlib' subdir inder $PREFIX/lib
+# move the files up one level and remove the dir
+mv $PREFIX/lib/LASlib/* $PREFIX/lib
+rmdir $PREFIX/lib/LASlib
+
