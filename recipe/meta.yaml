@@ -24,12 +24,12 @@ requirements:
 
 test:
   commands:
-    - if not exist %LIBRARY_BIN%\\las.dll exit 1        # [win]
-    - if not exist %LIBRARY_LIB%\\las.lib exit 1        # [win]
+    - if not exist %LIBRARY_BIN%\\LASlib.dll exit 1     # [win]
+    - if not exist %LIBRARY_LIB%\\LASlib.lib exit 1     # [win]
     - if not exist %LIBRARY_INC%\\lasreader.hpp exit 1  # [win]
     - if not exist %LIBRARY_INC%\\laswriter.hpp exit 1  # [win]
-    - test -f $PREFIX/lib/liblas.so                     # [linux]
-    - test -f $PREFIX/lib/liblas.dylib                  # [osx]
+    - test -f $PREFIX/lib/libLASlib.so                  # [linux]
+    - test -f $PREFIX/lib/libLASlib.dylib               # [osx]
     - test -f $PREFIX/include/lasreader.hpp             # [unix]
     - test -f $PREFIX/include/laswriter.hpp             # [unix]
     - lasdiff64 -h
