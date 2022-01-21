@@ -1,8 +1,11 @@
 
-:: Remove -GL from CXXFLAGS as this causes a fatal error
-set "CXXFLAGS= -MD"
+mkdir build
+cd build
 
-cmake -G "NMake Makefiles" -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% -D CMAKE_BUILD_TYPE=Release .
+cmake -G "NMake Makefiles" -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+    -D CMAKE_BUILD_TYPE=Release ^
+    -D BUILD_SHARED_LIBS=ON ^
+    ..
 if errorlevel 1 exit 1
 
 nmake 
