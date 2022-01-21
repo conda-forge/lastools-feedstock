@@ -14,3 +14,9 @@ if errorlevel 1 exit 1
 
 nmake install
 if errorlevel 1 exit 1
+
+:: For some reason, the DLL doesn't actually get installed. Do this here
+copy LASlib\lib\LASlib.dll %LIBRARY_BIN%
+if errorlevel 1 exit 1
+copy LASlib\lib\LASlib.lib %LIBRARY_LIB%
+if errorlevel 1 exit 1
