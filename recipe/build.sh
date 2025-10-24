@@ -5,8 +5,22 @@
 mkdir build
 cd build
 
+CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+
 cmake ${CMAKE_ARGS} -G Ninja -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DBUILD_SHARED_LIBS=ON \
+    -DCMAKE_BUILD_TYPE=Release \
+    ..
+ninja install
+
+cd ..
+
+rm -rf build
+mkdir build
+cd build
+
+cmake ${CMAKE_ARGS} -G Ninja -DCMAKE_INSTALL_PREFIX=$PREFIX \
+    -DBUILD_SHARED_LIBS=OFF \
     -DCMAKE_BUILD_TYPE=Release \
     ..
 ninja install

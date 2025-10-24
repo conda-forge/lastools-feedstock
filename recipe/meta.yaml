@@ -1,4 +1,4 @@
-{% set version = "v2.0.2" %}
+{% set version = "2.0.4" %}
 
 package:
   name: lastools
@@ -6,10 +6,8 @@ package:
 
 source:
   fn: {{ version }}.tar.gz
-  url: https://github.com/LAStools/LAStools/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 41200e2b6ad92fe057fc5008132978090890463d5b602bce89ecf8aa84c78a82
-  patches:
-    - lasindex.patch
+  url: https://github.com/LAStools/LAStools/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 40009d74dd7e782e2f245f4e35d063db06e74b2948a47157ee41f1cf63057090
 
 build:
   number: 0
@@ -19,10 +17,12 @@ requirements:
     - cmake
     - ninja
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-
+    - proj
   run:
+    - proj
 
 test:
   commands:
