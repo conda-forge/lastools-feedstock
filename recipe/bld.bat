@@ -15,6 +15,7 @@ if errorlevel 1 exit 1
 nmake install
 if errorlevel 1 exit 1
 
+cd ..
 del /s /q build
 mkdir build
 cd build

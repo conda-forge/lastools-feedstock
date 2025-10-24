@@ -20,8 +20,9 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-
+    - proj
   run:
+    - proj
 
 test:
   commands:
