@@ -8,8 +8,6 @@ source:
   fn: {{ version }}.tar.gz
   url: https://github.com/LAStools/LAStools/archive/refs/tags/v{{ version }}.tar.gz
   sha256: b6c6ac33835ead2c69d05e282febc266048ba071a71dae6fdad321d532dfcf78
-  patches:
-    - lasindex.patch
 
 build:
   number: 0
