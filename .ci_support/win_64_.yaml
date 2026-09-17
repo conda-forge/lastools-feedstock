@@ -9,6 +9,6 @@ channel_targets:
 cxx_compiler:
 - vs2022
 proj:
-- '9.8'
+- '9.9'
 target_platform:
 - win-64
